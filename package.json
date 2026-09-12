@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "npm --prefix projeto-react run dev",
+    "build": "npm --prefix projeto-react run build",
+    "preview": "npm --prefix projeto-react run preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
