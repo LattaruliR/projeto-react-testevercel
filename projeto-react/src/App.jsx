@@ -1,38 +1,28 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
-import Challenge from './components/Challenge'
-import Counter from './components/Counter'
-import ShowMessage from './components/ShowMessage'
-import Greeting from './components/Greeting'
-import RandomNumber from './components/RandomNumber'
+import HomePage from './components/HomePage'
+import LorePage from './components/LorePage'
+import MechanicsPage from './components/Mechanics/MechanicsPage'
+import SiteHeader from './components/SiteHeader'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [page, setPage] = useState('home')
+
+  const content = {
+    home: <HomePage onNavigate={setPage} />,
+    lore: <LorePage onBack={() => setPage('home')} />,
+    mechanics: <MechanicsPage onBack={() => setPage('home')} />,
+  }
 
   return (
-    <div className = "App">
-      <h2>Atividade de Front-end</h2>
-      <h1>Desafio 1</h1>
-      <Challenge />
-      <p>A soma aparece no console</p>
-      <br></br>
-      <h1>Desafio 2</h1>
-      <Counter />
-      <br></br>
-      <h1>Desafio 3</h1>
-      <ShowMessage />
-      <br></br>
-      <h1>Desafio 4</h1>
-      <Greeting name="Ricardo" />
-      <Greeting name="John Silver" />
-      <Greeting name="Zoro" />
-      <br></br>
-      <h1>Desafio 5</h1>
-      <RandomNumber />
-      <br></br>
+    <div className="app-shell">
+      <SiteHeader page={page} onHome={() => setPage('home')} onNavigate={setPage} />
+      {content[page]}
+      
+      <footer className="global-footer">
+        <span>ROSEMARY 2010-2013</span>
+        <span>ROSEMARY, DAKOTA DO NORTE</span>
+      </footer>
     </div>
   )
 }
