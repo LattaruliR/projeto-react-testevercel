@@ -20,8 +20,8 @@ function App() {
       {content[page]}
       
       <footer className="global-footer">
-        <span>ROSEMARY 2010-2013</span>
-        <span>ROSEMARY, DAKOTA DO NORTE</span>
+        <span>CITY OF ROSEMARY 2010?-2013</span>
+        <span>ROSEMARY, NORTH DAKOTA</span>
       </footer>
     </div>
   )

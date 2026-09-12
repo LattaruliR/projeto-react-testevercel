@@ -11,16 +11,16 @@ function SiteHeader({ page, onHome, onNavigate }) {
           className={page === 'lore' ? 'current' : ''}
           onClick={() => onNavigate('lore')}
         >
-          Lore
+          NOTÍCIAS
         </button>
         <button
           className={page === 'mechanics' ? 'current' : ''}
           onClick={() => onNavigate('mechanics')}
         >
-          Mecânicas
+          MECÂNICAS
         </button>
       </nav>
-      <span className="header-status">arquivo comunitário</span>
+      <span className="header-status">Arquivos da Cidade</span>
     </header>
   )
 }

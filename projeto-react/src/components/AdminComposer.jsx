@@ -31,7 +31,7 @@ function AdminComposer({ onCreate, onClose }) {
       </label>
       <label>
         Título
-        <input name="topic" placeholder="Título da entrada" required />
+        <input name="topic" placeholder="Título" required />
       </label>
       <label>
         Publicado por
@@ -39,15 +39,15 @@ function AdminComposer({ onCreate, onClose }) {
       </label>
       <label>
         URL da imagem
-        <input name="image" placeholder="https://..." optional />
+        <input name="image" placeholder="https://... (opcional)" optional />
       </label>
       <label>
-        Descrição curta
-        <textarea name="excerpt" placeholder="Sobre o que é esta entrada?" required />
+        Descrição
+        <textarea name="excerpt" placeholder="Descrição" required />
       </label>
       <label>
-        História completa
-        <textarea name="body" placeholder="Texto da história..." />
+        Texto completo
+        <textarea name="body" placeholder="Conteúdo" />
       </label>
       <button className="primary-action" type="submit">
         publicar entrada <span>↗</span>
